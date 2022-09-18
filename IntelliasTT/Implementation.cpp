@@ -49,16 +49,20 @@ int separatorCount(string& line, char separator) {
 }
 void modifyDate(string& date) {
 	map <string, string> months;
-	months.insert(pair<string, string>("1", "January"));
-	months.insert(pair<string, string>("2", "February"));
-	months.insert(pair<string, string>("3", "March"));
-	months.insert(pair<string, string>("4", "April"));
-	months.insert(pair<string, string>("5", "May"));
-	months.insert(pair<string, string>("6", "June"));
-	months.insert(pair<string, string>("7", "July"));
-	months.insert(pair<string, string>("8", "August"));
-	months.insert(pair<string, string>("9", "September"));
+	months.insert(pair<string, string>("01", "January"));
+	months.insert(pair<string, string>("02", "February"));
+	months.insert(pair<string, string>("03", "March"));
+	months.insert(pair<string, string>("04", "April"));
+	months.insert(pair<string, string>("05", "May"));
+	months.insert(pair<string, string>("06", "June"));
+	months.insert(pair<string, string>("07", "July"));
+	months.insert(pair<string, string>("08", "August"));
+	months.insert(pair<string, string>("09", "September"));
 	months.insert(pair<string, string>("10", "October"));
 	months.insert(pair<string, string>("11", "November"));
 	months.insert(pair<string, string>("12", "December"));
+
+	string y = date.substr(0, 4);
+	string m = date.substr(5, 2);
+	date = y + " " + months[m];
 }

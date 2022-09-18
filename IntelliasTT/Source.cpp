@@ -18,12 +18,12 @@ using std::cin;
 
 int main() {
 	char separator = '*';
-	/*string fin_name, fout_name;
+	string fin_name, fout_name;
 	cout << "Plese enter input data file name: ";
 	cin >> fin_name;
 	cout << "Please enter output data file name: ";
-	cin >> fout_name;*/
-	//ifstream fin(fin_name);
+	cin >> fout_name;
+	ifstream fin(fin_name);
 	ifstream fin("Stuff.txt");
 	if (fin.fail()) {
 		cout << "Incorrect input file name.\n";
@@ -43,9 +43,14 @@ int main() {
 
 		name = getName(line, separator);
 		date = getDate(line, separator);
+		modifyDate(date);
 		hours_worked = getHoursWorked(line, separator);
 		fout << "Name: " << name << ", date: " << date << ", hours worked: " << hours_worked << ".\n";
 	}
+	
+	
+	
+	
 	fin.close();
 	fout.close();
 }
