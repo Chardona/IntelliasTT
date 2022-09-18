@@ -1,3 +1,0 @@
-Name: john, date: 2012 November, hours worked: 20.
-Name: daniel, date: 2022 January, hours worked: 11.
-Name: espaniel, date: 2018 April, hours worked: 33.
